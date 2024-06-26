@@ -1,0 +1,17 @@
+package ejemplos;
+
+import javax.swing.JFileChooser;
+
+public class Ejemplo09JFileChooser2 {
+
+	public static void main(String[] args) {
+
+		JFileChooser elegirArchivo = new JFileChooser();
+		
+		int eleccion = elegirArchivo.showOpenDialog(null);
+		
+		
+
+	}
+
+}

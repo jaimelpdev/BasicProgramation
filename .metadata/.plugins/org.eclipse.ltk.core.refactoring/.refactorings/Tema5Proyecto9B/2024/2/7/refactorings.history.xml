@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;m1&apos; in &apos;inicio.Inicio.main(...)&apos; to &apos;motor1&apos;&#x0A;- Original project: &apos;Tema5Proyecto9B&apos;&#x0A;- Original element: &apos;inicio.Inicio.main(String[]).m1&apos;&#x0A;- Renamed element: &apos;m1&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;m1&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;inicio{Inicio.java[Inicio~main~\[QString;@m1!186!229!192!193!QMotor;!0!false" name="motor1" references="true" stamp="1708016022780" version="1.0"/>
+</session>

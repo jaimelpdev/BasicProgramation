@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ejemplos.Ejemplo12&apos; to &apos;Mediana&apos;&#x0A;- Original project: &apos;Tema4&apos;&#x0A;- Original element: &apos;ejemplos.Ejemplo12&apos;&#x0A;- Renamed element: &apos;ejemplos.Mediana&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Ejemplo12&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ejemplos{Ejemplo12.java[Ejemplo12" matchStrategy="1" name="Mediana" qualified="false" references="true" similarDeclarations="false" stamp="1705429082132" textual="false" version="1.0"/>
+</session>

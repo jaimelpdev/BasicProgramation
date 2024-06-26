@@ -1,0 +1,89 @@
+package practica;
+
+public class Cuenta {
+
+	private final String ENCABEZADO_CUENTA = "CAFETERÍA SON FERRER\nC/Cóndor, 9\nSon Ferrer, Calvià\n-----------------------------------------------------------------------------------";
+	String[][] articulos;
+	private int numArticulos;
+
+	// Método constructor de la clase, lo hemos hecho explicito para inicializar el
+	// array.
+	public Cuenta(int maxArticulos) {
+		articulos = new String[maxArticulos][3];
+		 for (int i = 0; i < maxArticulos; i++) {
+		        for (int j = 0; j < 3; j++) {
+		            articulos[i][j] = ""; // Inicializa todos los elementos con cadenas vacías
+		        }
+		    }
+	}
+
+	// Método para añadir un artículo siempre que haya espacio en el array.
+	public void addArticulo(String nombre, String precio, String unidades) {
+		if (hayEspacio()) {
+			articulos[numArticulos][0] = nombre;
+			articulos[numArticulos][1] = precio;
+			articulos[numArticulos][2] = unidades;
+			numArticulos++;
+		}
+	}
+
+	// Método para asegurarse que en el array articulos queda espacio para un
+	// artículo más, este método será usado en addArticulo().
+	public boolean hayEspacio() {
+		return numArticulos < articulos.length;
+	}
+
+	// Método para mostrar toda la información de todos los artículos.
+	public String listadoArticulos() {
+	    String listaArticulos = "";
+	    
+	    String encabezadoArticulos = String.format("%-25s %4s %8s %8s\n", "DESCRIPCIÓN", "UDS.", "PRE./UD.", "TOTAL(€)");
+	    String decoracionEncabezado = String.format("%-25s %4s %8s %8s\n", "-------------------------", "----", "--------", "--------");
+	    
+	    listaArticulos += ENCABEZADO_CUENTA;
+	    listaArticulos += encabezadoArticulos;
+	    listaArticulos += decoracionEncabezado;
+	    
+	    for (int i = 0; i < numArticulos; i++) {
+	        if (articulos[i] != null && !articulos[i][1].isEmpty() && !articulos[i][2].isEmpty()) {
+	            double precio = Double.parseDouble(articulos[i][1]);
+	            double unidades = Double.parseDouble(articulos[i][2]);
+	            String infoArticulo = String.format("%-25s %4s %8s %8s\n", 
+	                                                articulos[i][0], 
+	                                                unidades, 
+	                                                precio, 
+	                                                precio * unidades);
+	            listaArticulos += infoArticulo;
+	        }
+	    }
+	    
+	    return listaArticulos;
+	}
+
+	// Método para mostrar los precios de la compra.
+	public String totales() {
+		double total = 0;
+		final double IVA = 1.10;
+
+		for (int i = 0; i < articulos.length; i++) {
+			total = total + Double.parseDouble(articulos[i][1]);
+		}
+
+		double aPagar = total * IVA;
+
+		return "A PAGAR\n-----------------------------------\n\t* Total: " + redondear(total) + " €\n\t* IVA: "
+				+ redondear(IVA) + " €\n\t* A pagar: " + redondear(aPagar) + " €";
+	}
+
+	// Método para que el programa vuelva a su estado habitual.
+	public void resetear() {
+		this.articulos = new String[articulos.length][3];
+		this.numArticulos = 0;
+	}
+
+	// Método privado para redondear números, para ser usado en el método totales().
+	private double redondear(double numero) {
+		return Math.round(numero * 100.0) / 100.0;
+	}
+
+}

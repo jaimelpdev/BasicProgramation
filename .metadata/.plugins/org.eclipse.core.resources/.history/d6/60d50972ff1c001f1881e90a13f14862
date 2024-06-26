@@ -1,0 +1,28 @@
+package ejercicios;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.Scanner;
+
+public class Ejer05b {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Ruta del archivo:");
+		String nombreArchivo = "";
+		
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+}

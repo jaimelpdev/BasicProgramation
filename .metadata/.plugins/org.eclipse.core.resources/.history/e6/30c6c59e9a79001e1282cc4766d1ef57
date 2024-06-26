@@ -1,0 +1,25 @@
+package hoja3Bucles_Condicionales;
+
+import java.util.Scanner;
+
+public class Ejer09 {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+		
+		double temp = 0;
+		
+		while(temp >= 0 && temp <= 50)
+		System.out.print("Tempertura: ");
+		temp = entrada.nextInt();
+		
+		if(temp >= 10 && temp <= 30) {
+			System.out.println("Temperatura correcta.");
+		} else if() {
+			
+		}
+		
+	}
+
+}

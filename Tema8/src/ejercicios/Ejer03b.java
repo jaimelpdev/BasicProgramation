@@ -1,0 +1,39 @@
+package ejercicios;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Ejer03b {
+
+	public static void main(String[] args) {
+
+		final String NOMBRE_ARCHIVO = "ficheros/contactos.txt";
+		
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(NOMBRE_ARCHIVO));
+			
+			String linea = br.readLine();
+			
+			while (linea != null) {
+				String datos[] = linea.split(", ");
+				
+				System.out.println("Apellidos: " + datos[0]);
+				System.out.println("Nombre: " + datos[1]);
+				System.out.println("Teléfono: " + datos[2]);
+				System.out.println("------");
+				
+				linea = br.readLine();
+			}
+			
+			br.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("No se ha encontrado el archivo.");
+		} catch (IOException e) {
+			System.out.println("Error al leer el archivo.");
+		}
+		
+	}
+
+}

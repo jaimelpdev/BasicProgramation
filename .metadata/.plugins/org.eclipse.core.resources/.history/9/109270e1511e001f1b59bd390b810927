@@ -1,0 +1,25 @@
+package ejemplosRecursividad;
+
+public class Ejemplo05BusquedaBinariaRecursiva2 {
+
+	public static void main(String[] args) {
+
+	}
+
+	private static int busqueda(int numeros[], int x, int i, int f) {
+
+		if (i > f) {
+			return -1;
+		}
+
+		int m = (i + f) / 2;
+		
+		if(m == x) {
+			return m;
+		}
+
+		if()
+		
+	}
+
+}

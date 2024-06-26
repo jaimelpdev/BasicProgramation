@@ -1,0 +1,35 @@
+package ejemplosRecursividad;
+
+public class Ejemplo05BusquedaBinariaRecursiva2 {
+
+	public static void main(String[] args) {
+
+		int x = 4;
+
+		int[] notas = { 1, 2, 3, 4, 5, 7, 8, 9, 10 };
+		
+		System.out.println("");
+		
+	}
+
+	private static int busqueda(int numeros[], int x, int i, int f) {
+
+		System.out.println("Buscando el número " + x + " entre la posición " + i + " y " + f);
+		
+		if (i > f) {
+			return -1;
+		}
+
+		int m = (i + f) / 2;
+
+		if (m == x) {
+			return m;
+		}
+
+		if (numeros[m] > x) {
+			return busqueda(numeros, x, m + 1, f);
+		}
+		return busqueda(numeros, x, i, m - 1);
+	}
+
+}

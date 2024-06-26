@@ -1,0 +1,51 @@
+package ejercicios;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Ejer05b {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+
+		System.out.println("Ruta del archivo:");
+		String nombreArchivo = entrada.nextLine();
+
+		System.out.println("Palabra a contar:");
+		String palabra = entrada.nextLine();
+
+		int i = 0;
+
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
+
+			String linea = br.readLine();
+
+			while (linea != null) {
+				if (linea.contains(palabra)) {
+					i++;
+				}
+
+				linea = br.readLine();
+			}
+
+			br.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("No se ha encontrado el archivo.");
+		} catch (IOException e) {
+			System.out.println("Error al leer el archivo.");
+		}
+
+		System.out.println("Se ha encontrado la palabra " + palabra + " en " + i + " líneas.");
+
+	}
+	
+	private static void numApariciones() {
+		
+	}
+
+}
