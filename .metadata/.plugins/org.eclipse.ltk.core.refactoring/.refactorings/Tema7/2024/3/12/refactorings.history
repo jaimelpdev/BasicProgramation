@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename method &apos;ejemplos3.Ejemplo20KeyEvent.Ejemplo19KeyEvent()&apos; to &apos;Ejemplo20KeyEvent&apos;&#x0D;&#x0A;- Original project: &apos;Tema7&apos;&#x0D;&#x0A;- Original element: &apos;ejemplos3.Ejemplo20KeyEvent.Ejemplo19KeyEvent()&apos;&#x0D;&#x0A;- Renamed element: &apos;ejemplos3.Ejemplo20KeyEvent.Ejemplo20KeyEvent()&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;Ejemplo19KeyEvent&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;ejemplos3{Ejemplo20KeyEvent.java[Ejemplo20KeyEvent~Ejemplo19KeyEvent" name="Ejemplo20KeyEvent" references="true" stamp="1711017570544" version="1.0"/>
-</session>
